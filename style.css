@@ -200,20 +200,24 @@ footer { background-color: var(--secondary-color); color: white; padding: 20px 0
 }
 
 .legality-img-box {
-    margin: 0 auto 15px auto; /* Membuat kotak gambar berada di tengah */
-    width: 60%; /* Memperkecil lebar kotak gambar agar tidak terlalu besar */
+    margin: 0 auto 15px auto;
+    width: 100%; /* Membuat kotak mengikuti lebar penuh kartu */
+    max-width: 220px; /* Batasi lebar maksimal agar tidak terlalu besar */
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid #ddd;
-    background: #fff;
+    background: #fdfdfd;
+    padding: 5px; /* Memberikan sedikit ruang bingkai putih */
 }
 
 .legality-img-box img {
     width: 100%;
-    aspect-ratio: 9 / 16; /* Menerapkan rasio vertikal 9:16 secara otomatis */
-    object-fit: cover; /* Menyesuaikan isi gambar tanpa gepeng */
+    height: auto; /* Membiarkan gambar menyesuaikan bentuk aslinya secara natural */
+    max-height: 160px; /* Batasi tinggi maksimal agar tetap ringkas */
+    object-fit: contain; /* Memastikan seluruh isi sertifikat terlihat utuh tanpa terpotong */
     transition: transform 0.3s ease;
     display: block;
+    margin: 0 auto;
 }
 
 .legality-img-box img:hover {
