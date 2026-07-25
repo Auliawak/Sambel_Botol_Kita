@@ -189,3 +189,41 @@ footer { background-color: var(--secondary-color); color: white; padding: 20px 0
     .hero-content h1 { font-size: 2rem; }
     .btn { width: 100%; text-align: center; }
 }
+
+/* ==========================================================================
+   STYLE KHUSUS KARTU LEGALITAS & SERTIFIKAT
+   ========================================================================== */
+.legality-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.legality-img-box {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.legality-img-box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.legality-img-box img:hover {
+    transform: scale(1.05);
+}
+
+.legality-number {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 15px;
+    background: #fff5f5;
+    padding: 6px;
+    border-radius: 4px;
+}
