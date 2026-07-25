@@ -88,11 +88,9 @@
                 <!-- KARTU HALAL -->
                 <div class="mission-card" style="display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
-                        <!-- JURUS INLINE STYLE UNTUK MEMAKSA GAMBAR MENGECIL -->
-                        <div style="width: 100%; height: 180px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; background: #fff; padding: 5px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                            <a href="images/sertifikat-halal.jpg" target="_blank" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                                <img src="images/sertifikat-halal.jpg" alt="Sertifikat Halal" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                            </a>
+                        <!-- MENGGUNAKAN ONCLICK UNTUK POP-UP -->
+                        <div style="width: 100%; height: 180px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; background: #fff; padding: 5px; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer;" onclick="openModal('images/sertifikat-halal.jpg')">
+                            <img src="images/sertifikat-halal.jpg" alt="Sertifikat Halal" style="max-width: 100%; max-height: 100%; object-fit: contain; transition: 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                         </div>
                         <h3 style="margin-bottom: 5px;">Sertifikat Halal</h3>
                         <p style="font-size: 0.9rem;">Standar kehalalan bahan baku dan proses produksi terjamin.</p>
@@ -103,11 +101,9 @@
                 <!-- KARTU P-IRT -->
                 <div class="mission-card" style="display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
-                        <!-- JURUS INLINE STYLE UNTUK MEMAKSA GAMBAR MENGECIL -->
-                        <div style="width: 100%; height: 180px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; background: #fff; padding: 5px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                            <a href="images/izin-pirt.jpg" target="_blank" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                                <img src="images/izin-pirt.jpg" alt="Izin P-IRT" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                            </a>
+                        <!-- MENGGUNAKAN ONCLICK UNTUK POP-UP -->
+                        <div style="width: 100%; height: 180px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; background: #fff; padding: 5px; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer;" onclick="openModal('images/izin-pirt.jpg')">
+                            <img src="images/izin-pirt.jpg" alt="Izin P-IRT" style="max-width: 100%; max-height: 100%; object-fit: contain; transition: 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                         </div>
                         <h3 style="margin-bottom: 5px;">Izin P-IRT</h3>
                         <p style="font-size: 0.9rem;">Menjamin produk aman, higienis, dan layak dikonsumsi.</p>
@@ -118,11 +114,9 @@
                 <!-- KARTU NIB -->
                 <div class="mission-card" style="display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
-                        <!-- JURUS INLINE STYLE UNTUK MEMAKSA GAMBAR MENGECIL -->
-                        <div style="width: 100%; height: 180px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; background: #fff; padding: 5px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                            <a href="images/nib-resmi.jpg" target="_blank" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                                <img src="images/nib-resmi.jpg" alt="NIB Resmi" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                            </a>
+                        <!-- MENGGUNAKAN ONCLICK UNTUK POP-UP -->
+                        <div style="width: 100%; height: 180px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; background: #fff; padding: 5px; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer;" onclick="openModal('images/nib-resmi.jpg')">
+                            <img src="images/nib-resmi.jpg" alt="NIB Resmi" style="max-width: 100%; max-height: 100%; object-fit: contain; transition: 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                         </div>
                         <h3 style="margin-bottom: 5px;">NIB Resmi</h3>
                         <p style="font-size: 0.9rem;">Badan usaha UMKM terdaftar sah di mata hukum.</p>
@@ -133,6 +127,12 @@
             </div>
         </div>
     </section>
+
+    <!-- WADAH POP-UP GAMBAR -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
 
     <footer>
         <div class="container text-center">

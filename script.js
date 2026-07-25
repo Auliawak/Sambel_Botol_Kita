@@ -156,3 +156,33 @@ if (msgForm) {
         msgForm.reset();
     });
 }
+
+// ==========================================================
+// 6. FITUR POP-UP GAMBAR (LIGHTBOX)
+// ==========================================================
+function openModal(imageSrc) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    if (modal && modalImg) {
+        modal.style.display = "flex"; // Memunculkan pop-up
+        modalImg.src = imageSrc; // Memasukkan sumber gambar
+    }
+}
+
+// Menutup modal dengan tombol X
+const modalCloseBtn = document.getElementById("modalClose");
+if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', () => {
+        document.getElementById("imageModal").style.display = "none";
+    });
+}
+
+// Menutup modal jika pengunjung mengklik area hitam (luar gambar)
+const modalElement = document.getElementById("imageModal");
+if (modalElement) {
+    modalElement.addEventListener('click', (e) => {
+        if (e.target === modalElement) {
+            modalElement.style.display = "none";
+        }
+    });
+}
