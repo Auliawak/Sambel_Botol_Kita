@@ -57,6 +57,7 @@ if (mobileMenu && navMenu) {
 document.addEventListener('DOMContentLoaded', () => {
     if(document.getElementById('mission-list')) loadMissions();
     if(document.getElementById('products-list')) loadProducts();
+    if(document.getElementById('home-products-list')) loadHomeProducts(); // Baris baru untuk Beranda
     if(document.getElementById('outlets-list')) loadOutlets();
 });
 
@@ -69,6 +70,7 @@ function loadMissions() {
     `).join('');
 }
 
+// Menampilkan produk DENGAN tombol (untuk halaman produk.html)
 function loadProducts() {
     document.getElementById('products-list').innerHTML = dummyProducts.map(p => `
         <div class="product-card">
@@ -82,6 +84,22 @@ function loadProducts() {
                     <a href="${p.linkShopee}" target="_blank" class="btn-mp btn-shopee"><i class="fa-solid fa-bag-shopping"></i> Shopee</a>
                     <a href="${p.linkTokopedia}" target="_blank" class="btn-mp btn-tokopedia"><i class="fa-solid fa-store"></i> Tokopedia</a>
                 </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Menampilkan produk TANPA tombol (untuk halaman index.html)
+function loadHomeProducts() {
+    document.getElementById('home-products-list').innerHTML = dummyProducts.map(p => `
+        <div class="product-card">
+            <div class="product-image-area">
+                <img src="${p.image}" alt="${p.name}">
+            </div>
+            <div class="product-info">
+                <h3>${p.name}</h3>
+                <p>${p.desc}</p>
+                <!-- Tombol Shopee & Tokopedia sengaja dihilangkan di sini -->
             </div>
         </div>
     `).join('');
